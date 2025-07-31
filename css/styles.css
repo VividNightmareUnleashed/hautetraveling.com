@@ -30,27 +30,35 @@ body {
     max-width: 500px;
     height: 120px;
     margin: 0 auto 40px;
-    border: 1px solid #333;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    color: #555;
-    letter-spacing: 2px;
     transition: all 0.3s ease;
-    text-transform: uppercase;
+    overflow: hidden;
 }
 
 .logo-placeholder:hover {
-    border-color: #666;
     box-shadow: 0 0 30px rgba(255,255,255,0.05);
+}
+
+.logo-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.logo-placeholder:hover .logo-image {
+    filter: brightness(1);
 }
 
 .tagline {
     font-size: clamp(14px, 2vw, 18px);
     font-weight: 200;
     letter-spacing: 3px;
-    color: #888;
+    color: #e6e6e6;
     text-transform: uppercase;
     animation: fadeInUp 1s ease-out 0.3s both;
 }
@@ -106,6 +114,22 @@ body {
     letter-spacing: 1px;
 }
 
+.google-form-container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+    border: 1px solid #333;
+    background: rgba(255,255,255,0.01);
+    overflow: hidden;
+}
+
+.google-form-container iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+}
+
+/* Form styles - commented out after Google Forms integration
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -168,6 +192,7 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(255,255,255,0.1);
 }
+*/
 
 /* Services Section */
 .services-section {
@@ -330,18 +355,6 @@ body {
     }
 }
 
-/* Background gradient overlay */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center top, rgba(255,255,255,0.02) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: -1;
-}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -351,7 +364,6 @@ body::before {
 
     .logo-placeholder {
         height: 80px;
-        font-size: 12px;
     }
 
     .tagline {
@@ -366,10 +378,19 @@ body::before {
         font-size: 20px;
         letter-spacing: 2px;
     }
-
-    .submit-btn {
-        width: 100%;
+    
+    .google-form-container {
+        border: none;
+        background: transparent;
     }
+    
+    .google-form-container iframe {
+        min-height: 2200px;
+    }
+
+    /* .submit-btn {
+        width: 100%;
+    } */
 
     /* Services mobile styles */
     .services-intro h3 {
