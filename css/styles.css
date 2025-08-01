@@ -5,24 +5,71 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #0a0a0a;
     color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
     overflow-x: hidden;
     min-height: 100vh;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 0;
+}
+
+/* Hero Section with Background */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 1;
+}
+
+/* When hero image is available, uncomment and use this:
+.hero-background {
+    background: url('../assets/hero-bg.jpg') center center no-repeat;
+    background-size: cover;
+}
+*/
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* Subtle overlay for when background image is added */
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 20px;
 }
 
 /* Logo Section */
 .logo-section {
     text-align: center;
-    margin-bottom: 80px;
-    animation: fadeInUp 1s ease-out;
+    margin-bottom: 40px;
 }
 
 .logo-placeholder {
@@ -55,43 +102,64 @@ body {
 }
 
 .tagline {
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: 200;
-    letter-spacing: 3px;
-    color: #e6e6e6;
+    letter-spacing: 4px;
+    color: #ffffff;
     text-transform: uppercase;
-    animation: fadeInUp 1s ease-out 0.3s both;
+    margin-top: 20px;
+    opacity: 0.9;
 }
 
-.divider {
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #666, transparent);
-    margin: 60px auto;
-    animation: expandWidth 1.5s ease-out 0.6s both;
+.section {
+    padding: 100px 0;
+    position: relative;
 }
 
-/* Description Section */
-.description-section {
-    max-width: 800px;
-    margin: 0 auto 80px;
-    text-align: center;
-    animation: fadeInUp 1s ease-out 0.9s both;
+.section-dark {
+    background-color: #000000;
 }
 
-.description {
+.section-alt {
+    background-color: #0a0a0a;
+}
+
+/* About Section */
+.about-section {
+    padding: 120px 20px;
+    background-color: #000000;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 60px;
+}
+
+.about-item h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.about-item p {
     font-size: 16px;
     line-height: 1.8;
-    color: #ccc;
+    color: #cccccc;
     font-weight: 300;
     letter-spacing: 0.5px;
+    text-align: justify;
 }
 
 /* Contact Form Section */
 .contact-section {
-    max-width: 600px;
-    margin: 0 auto;
-    animation: fadeInUp 1s ease-out 1.2s both;
+    padding: 120px 20px;
+    background-color: #0a0a0a;
 }
 
 .contact-header {
@@ -100,30 +168,33 @@ body {
 }
 
 .contact-header h2 {
-    font-size: 24px;
-    font-weight: 300;
-    letter-spacing: 4px;
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 10px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .contact-header p {
-    font-size: 14px;
-    color: #666;
-    letter-spacing: 1px;
+    font-size: 18px;
+    color: #999999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .form-container {
     width: 100%;
-    max-width: 100%;
-    margin-top: 40px;
-    border: 1px solid #333;
+    margin-top: 60px;
     background: rgba(255,255,255,0.02);
-    padding: 40px;
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.03);
-    min-height: 500px;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 60px;
+    border-radius: 0;
 }
 
 /* Form Styles */
@@ -196,12 +267,12 @@ body {
 }
 
 .submit-btn {
-    margin-top: 30px;
-    padding: 15px 50px;
-    background: transparent;
-    border: 1px solid #666;
-    color: #fff;
-    font-size: 12px;
+    margin-top: 40px;
+    padding: 20px 60px;
+    background: #1a9b9e;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
     letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
@@ -209,13 +280,13 @@ body {
     align-self: center;
     position: relative;
     overflow: hidden;
+    font-weight: 400;
 }
 
 .submit-btn:hover {
-    background: #fff;
-    color: #000;
+    background: #22c1c5;
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(26,155,158,0.3);
 }
 
 .submit-btn:disabled {
@@ -252,70 +323,102 @@ body {
 
 /* Services Section */
 .services-section {
-    max-width: 1000px;
-    margin: 0 auto 80px;
-    animation: fadeInUp 1s ease-out 0.9s both;
+    padding: 100px 20px;
+    background-color: #0a0a0a;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .services-intro {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
-.services-intro h3 {
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 4px;
+.services-intro h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    margin-bottom: 30px;
-    color: #fff;
+    margin-bottom: 40px;
+    color: #ffffff;
 }
 
 .services-intro p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 15px;
+    color: #cccccc;
+    margin-bottom: 20px;
     font-weight: 300;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Stats Grid */
+/* Stats Section */
+.stats-section {
+    padding: 120px 20px;
+    background-color: #000000;
+    position: relative;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.stats-header h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin: 60px 0;
-    padding: 60px 0;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 60px;
+    margin-bottom: 80px;
 }
 
 .stat-item {
     text-align: center;
+    padding: 40px 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.02);
     transition: all 0.3s ease;
 }
 
 .stat-item:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.2);
     transform: translateY(-5px);
 }
 
 .stat-number {
-    font-size: 48px;
+    font-size: 72px;
     font-weight: 200;
-    color: #fff;
+    color: #ffffff;
     letter-spacing: 2px;
-    margin-bottom: 10px;
-    background: linear-gradient(to bottom, #fff, #999);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 15px;
+    display: block;
 }
 
 .stat-label {
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #666;
+    letter-spacing: 3px;
+    color: #999999;
+    font-weight: 300;
 }
 
 /* Services Details */
@@ -331,84 +434,201 @@ body {
     font-weight: 300;
 }
 
-/* Media Partners */
-.media-partners {
-    margin: 50px 0;
-    padding: 40px;
-    border: 1px solid #222;
-    background: rgba(255,255,255,0.01);
+/* Instagram Showcase Section */
+.instagram-section {
+    padding: 120px 20px;
+    background-color: #0a0a0a;
 }
 
-.media-partners h4 {
-    font-size: 18px;
-    font-weight: 300;
-    letter-spacing: 3px;
+.instagram-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.instagram-header h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    margin-bottom: 30px;
-    color: #888;
-}
-
-.partner-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px 40px;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
-.partner-logos span {
-    font-size: 14px;
-    color: #ccc;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    cursor: default;
-}
-
-.partner-logos span:hover {
-    color: #fff;
-    transform: scale(1.05);
-}
-
-.guarantee {
-    font-size: 12px;
-    text-transform: uppercase;
+.instagram-header p {
+    font-size: 18px;
+    color: #999999;
     letter-spacing: 2px;
-    color: #666;
-    margin-top: 20px;
+    text-transform: uppercase;
 }
 
-.cta-text {
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.instagram-account {
+    background: #000000;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.instagram-account:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.instagram-account img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Brand Partnerships Section */
+.partnerships-section {
+    padding: 120px 20px;
+    background-color: #000000;
+}
+
+.partnerships-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partnerships-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.partnerships-header h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.brand-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    align-items: center;
+}
+
+.brand-logo {
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: brightness(0.8);
+    padding: 20px;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+
+.brand-logo img {
+    max-width: 150px;
+    height: auto;
+    filter: invert(1);
+}
+
+.brand-logo span {
     font-size: 16px;
-    line-height: 1.8;
-    color: #ccc;
-    margin-top: 40px;
+    color: #cccccc;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 15px;
 }
 
-.cta-text strong {
-    color: #fff;
-    font-weight: 400;
+/* Section Titles */
+.section-title {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.section-subtitle {
+    font-size: 18px;
+    color: #999999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-@keyframes expandWidth {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-    to {
-        width: 80px;
-        opacity: 1;
-    }
+/* Accent Color */
+.accent {
+    color: #1a9b9e;
+}
+
+/* Why Work With Us Section */
+.why-section {
+    padding: 120px 20px;
+    background-color: #000000;
+}
+
+.why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.why-item {
+    padding: 40px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.why-item:hover {
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-5px);
+}
+
+.why-item .icon {
+    font-size: 48px;
+    color: #1a9b9e;
+    margin-bottom: 20px;
+}
+
+.why-item h3 {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.why-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
 }
 
 

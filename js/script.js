@@ -1,7 +1,7 @@
-// Interactions and animations for HAUTE TRAVELING MEDIA GROUP
+// HAUTE TRAVELING MEDIA GROUP - Media Kit Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scroll behavior for internal links
+    // Smooth scroll behavior for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe stat numbers
-    document.querySelectorAll('.stat-number').forEach(stat => {
+    // Observe stat numbers and why section numbers
+    document.querySelectorAll('.stat-number, .why-item .icon').forEach(stat => {
         statsObserver.observe(stat);
     });
     
@@ -126,8 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const hasPlus = finalValue.includes('+');
         const hasM = finalValue.includes('M');
         const hasB = finalValue.includes('B');
+        const hasX = finalValue.includes('x');
         
         let numericValue = parseFloat(finalValue.replace(/[^0-9.]/g, ''));
+        if (hasX) numericValue = parseInt(finalValue); // For values like "58x"
+        
         let currentValue = 0;
         const increment = numericValue / 50;
         const duration = 2000;
@@ -145,35 +148,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (hasB) displayValue += 'B';
             if (hasPlus) displayValue += '+';
             if (isPercentage) displayValue += '%';
+            if (hasX) displayValue += 'x';
             
             element.textContent = displayValue;
         }, stepTime);
     }
-});
-
-// Add CSS animation keyframes dynamically
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
     
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(100%);
-            opacity: 0;
-        }
+    // Parallax effect for hero section
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxSpeed = 0.5;
+            heroSection.querySelector('.hero-background').style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+        });
     }
-`;
-document.head.appendChild(style);
+});

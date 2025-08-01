@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HAUTE TRAVELING MEDIA GROUP - The Largest Luxury Lifestyle & Travel Media Group. 124 Instagram Pages, 113M+ Followers, 1B+ Monthly Impressions.">
+    <meta name="keywords" content="luxury travel, media group, instagram marketing, hospitality marketing, luxury hotels, resorts">
+    <meta name="author" content="HAUTE TRAVELING MEDIA GROUP">
+    <title>HAUTE TRAVELING MEDIA GROUP - Luxury Travel Media Kit 2025</title>
+    
+    <style>
+/* Complete CSS for HAUTE TRAVELING MEDIA GROUP */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Hero Section with Background */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 1;
+}
+
+/* When hero image is available, uncomment and use this:
+.hero-background {
+    background: url('assets/hero-bg.jpg') center center no-repeat;
+    background-size: cover;
+}
+*/
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* Subtle overlay for when background image is added */
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Logo Section */
+.logo-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+    margin: 0 auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.logo-placeholder:hover {
+    box-shadow: 0 0 30px rgba(255,255,255,0.05);
+}
+
+.logo-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.logo-placeholder:hover .logo-image {
+    filter: brightness(1);
+}
+
+.tagline {
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 200;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-dark {
+    background-color: #000000;
+}
+
+.section-alt {
+    background-color: #0a0a0a;
+}
+
+/* About Section */
+.about-section {
+    padding: 120px 20px;
+    background-color: #000000;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 60px;
+}
+
+.about-item h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.about-item p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cccccc;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+/* Contact Form Section */
+.contact-section {
+    padding: 120px 20px;
+    background-color: #0a0a0a;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-header p {
+    font-size: 18px;
+    color: #999999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container {
+    width: 100%;
+    margin-top: 60px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 60px;
+    border-radius: 0;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-group select {
+    cursor: pointer;
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23888' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-group select option {
+    background: #000;
+    color: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-bottom-color: #888;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    margin-top: 40px;
+    padding: 20px 60px;
+    background: #1a9b9e;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.submit-btn:hover {
+    background: #22c1c5;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(26,155,158,0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.submit-btn .btn-loading {
+    display: inline-block;
+}
+
+/* Form Messages */
+.form-message {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    animation: fadeInUp 0.5s ease;
+}
+
+.success-message {
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #28a745;
+}
+
+.error-message {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #dc3545;
+}
+
+/* Services Section */
+.services-section {
+    padding: 100px 20px;
+    background-color: #0a0a0a;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.services-intro h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.services-intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-weight: 300;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 120px 20px;
+    background-color: #000000;
+    position: relative;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.stats-header h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 40px 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.02);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 72px;
+    font-weight: 200;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.stat-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999999;
+    font-weight: 300;
+}
+
+/* Services Details */
+.services-details {
+    text-align: center;
+}
+
+.services-details p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Instagram Showcase Section */
+.instagram-section {
+    padding: 120px 20px;
+    background-color: #0a0a0a;
+}
+
+.instagram-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.instagram-header h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.instagram-header p {
+    font-size: 18px;
+    color: #999999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.instagram-account {
+    background: #000000;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.instagram-account:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.instagram-account img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Brand Partnerships Section */
+.partnerships-section {
+    padding: 120px 20px;
+    background-color: #000000;
+}
+
+.partnerships-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partnerships-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.partnerships-header h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.brand-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    align-items: center;
+}
+
+.brand-logo {
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: brightness(0.8);
+    padding: 20px;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+
+.brand-logo img {
+    max-width: 150px;
+    height: auto;
+    filter: invert(1);
+}
+
+.brand-logo span {
+    font-size: 16px;
+    color: #cccccc;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #999999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Accent Color */
+.accent {
+    color: #1a9b9e;
+}
+
+/* Why Work With Us Section */
+.why-section {
+    padding: 120px 20px;
+    background-color: #000000;
+}
+
+.why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.why-item {
+    padding: 40px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.why-item:hover {
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-5px);
+}
+
+.why-item .icon {
+    font-size: 48px;
+    color: #1a9b9e;
+    margin-bottom: 20px;
+}
+
+.why-item h3 {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.why-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 60px 20px;
+    }
+
+    .logo-placeholder {
+        height: 80px;
+    }
+
+    .tagline {
+        letter-spacing: 1px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .contact-header h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .form-container {
+        border: 1px solid #222;
+        padding: 30px 20px;
+        box-shadow: none;
+    }
+    
+    .contact-form {
+        gap: 20px;
+    }
+    
+    .form-group label {
+        font-size: 11px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 15px 30px;
+    }
+    
+    .form-message {
+        font-size: 13px;
+        padding: 12px 15px;
+    }
+
+    /* Services mobile styles */
+    .services-intro h3 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .partner-logos {
+        gap: 15px 25px;
+    }
+
+    .partner-logos span {
+        font-size: 12px;
+    }
+
+    .media-partners {
+        padding: 30px 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="logo-section">
+                <div class="logo-placeholder">
+                    <img src="assets/haute-traveling.png" alt="HAUTE TRAVELING MEDIA GROUP" class="logo-image">
+                </div>
+                <p class="tagline">Travel & Inspire</p>
+                <p class="tagline" style="font-size: 16px; letter-spacing: 2px; margin-top: 10px;">2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-item">
+                <h3>What We Do</h3>
+                <p>We are committed to travel as part of our luxury lifestyle. We aim to help high net-worth individuals bring their jet-setting fantasies to life and strive to give our hospitality clients a unique opportunity to amplify their reach.</p>
+                <p>As one of the trusted luxury travel-lifestyle-focused PR companies, we have our sights set on the future and how we can impact the industry positively, meaningfully, and sustainably.</p>
+            </div>
+            <div class="about-item">
+                <h3>Why We Do It</h3>
+                <p>A sense of wanderlust. A desire to see more. We started our own Instagram Pages as a way to share our passion for traveling with the world. As our pages grew and we began to travel to many of the most luxurious hotels/resorts in the world, we quickly realized the disconnect between the destination and the online media that represented it.</p>
+                <p>The journey began to create digital media that inspired high-net-worth individuals and entrepreneurs to visit these destinations.</p>
+            </div>
+            <div class="about-item">
+                <h3>Who We Are</h3>
+                <p>A team of PR professionals who all share the same passion for travel and the desire for wanderlust.</p>
+                <p>By harnessing ideas that appeal to discerning travelers, we create maximum reach across multiple media channels and help our clients succeed by reaching the broadest base of engaged consumers possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-header">
+                <h2>Our Reach</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">124</span>
+                    <span class="stat-label">Instagram Pages</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">113M+</span>
+                    <span class="stat-label">Total Followers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1B+</span>
+                    <span class="stat-label">Monthly Impressions</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Properties Featured</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us Section -->
+    <section class="why-section">
+        <div class="why-container">
+            <h2 class="section-title">Why Work With Us?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="icon">92%</div>
+                    <h3>Trust Earned Media</h3>
+                    <p>Of consumers say they trust earned media, such as social media and recommendations, above all forms of advertising.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">52%</div>
+                    <h3>Travel Influence</h3>
+                    <p>Of travelers were so influenced by social media that they changed their original travel plans.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">82%</div>
+                    <h3>Brand Trust</h3>
+                    <p>Of consumers trust a company more if they are involved with social media.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">50%</div>
+                    <h3>Direct Bookings</h3>
+                    <p>Of travel companies have said that direct bookings have been generated from social media.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">58x</div>
+                    <h3>Instagram Engagement</h3>
+                    <p>Social media users on Instagram interact with brands 58 times more than on Facebook.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">45%</div>
+                    <h3>Video Conversion</h3>
+                    <p>Of leisure travelers booked instantly after watching a video of the travel activity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Partnerships Section -->
+    <section class="partnerships-section">
+        <div class="partnerships-container">
+            <div class="partnerships-header">
+                <h2>Brand Partnerships</h2>
+            </div>
+            
+            <!-- Hospitality Partners -->
+            <div class="partnership-category" style="margin-bottom: 80px;">
+                <h3 style="font-size: 24px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #999999; text-align: center; margin-bottom: 40px;">Hospitality Partners</h3>
+                <div class="brand-logos-grid">
+                    <div class="brand-logo">
+                        <span>Raffles Hotels & Resorts</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Jumeirah Hotels & Resorts</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>The Plaza</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Sandals</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Fairmont Hotels & Resorts</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Claridge's</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>La Mamounia Marrakech</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>One&Only</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Waldorf Astoria</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Park Hyatt</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Four Seasons</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>St. Regis</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Conrad Hotels & Resorts</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>The Ritz-Carlton</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Hilton</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Kempinski</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Media Partners -->
+            <div class="partnership-category">
+                <h3 style="font-size: 24px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #999999; text-align: center; margin-bottom: 40px;">Media Partners</h3>
+                <div class="brand-logos-grid">
+                    <div class="brand-logo">
+                        <span>Forbes Travel</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Travel + Leisure</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Condé Nast Traveler</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Luxury Travel Magazine</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Luxury Lifestyle Magazine</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>LA Magazine</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>Haute Living</span>
+                    </div>
+                    <div class="brand-logo">
+                        <span>& Many More</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 16px; text-transform: uppercase; letter-spacing: 3px; color: #1a9b9e; margin-top: 40px;">Guaranteed Publishing Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-intro">
+                <h2>Elevate Your Brand</h2>
+                <p>Do you have a hospitality-based company such as a hotel, resort, tour operator, DMC, villa rental, boat/yacht rental, or travel agency?</p>
+                <p>Are you seeking more targeted exposure to an affluent audience for branding and booking purposes?</p>
+            </div>
+            
+            <div class="services-details">
+                <p style="text-align: center; font-size: 18px; line-height: 1.8; margin-bottom: 60px;">We specialize in Luxury Lifestyle and travel content that speaks to high-net-worth individuals interested in unique properties in elite travel destinations.</p>
+                
+                <p style="text-align: center; font-size: 20px; line-height: 1.8; color: #ffffff; margin-bottom: 40px;">If you are interested in hosting one of our media team members at your property and having content showcased on <strong style="color: #1a9b9e;">124 Instagram Pages</strong> to an audience of over <strong style="color: #1a9b9e;">113 Million Followers</strong>, potentially exposing your brand to <strong style="color: #1a9b9e;">1 Billion Impressions</strong>, please fill out the information below.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-header">
+            <h2>Partner With Us</h2>
+            <p>Begin Your Luxury Media Journey</p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="form-container">
+                <form id="contact-form" action="https://formspree.io/f/xnnzzygp" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Contact Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required placeholder="Your company name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company-type">Company Type *</label>
+                        <select id="company-type" name="company-type" required>
+                            <option value="">Select your company type</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="resort">Resort</option>
+                            <option value="tour-operator">Tour Operator</option>
+                            <option value="dmc">DMC</option>
+                            <option value="villa-rental">Villa Rental</option>
+                            <option value="yacht-rental">Boat/Yacht Rental</option>
+                            <option value="travel-agency">Travel Agency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <input type="text" id="location" name="location" required placeholder="City, Country">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="instagram">Instagram Handle</label>
+                        <input type="text" id="instagram" name="instagram" placeholder="@yourhandle">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your property and goals..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Submit Partnership Request</span>
+                        <span class="btn-loading" style="display: none;">Sending...</span>
+                    </button>
+                    
+                    <div class="form-message success-message" style="display: none;">
+                        Thank you for your submission. We'll be in touch soon.
+                    </div>
+                    
+                    <div class="form-message error-message" style="display: none;">
+                        There was an error submitting your form. Please try again.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+// HAUTE TRAVELING MEDIA GROUP - Media Kit Website
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll behavior for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Form submission handling
+    const form = document.getElementById('contact-form');
+    const submitBtn = form?.querySelector('.submit-btn');
+    const btnText = form?.querySelector('.btn-text');
+    const btnLoading = form?.querySelector('.btn-loading');
+    const successMessage = form?.querySelector('.success-message');
+    const errorMessage = form?.querySelector('.error-message');
+    
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Hide any existing messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-block';
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                errorMessage.style.display = 'block';
+                console.error('Form submission error:', error);
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline-block';
+                btnLoading.style.display = 'none';
+            }
+        });
+        
+        // Client-side validation enhancement
+        const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.style.borderBottomColor = '#a00';
+                } else {
+                    this.style.borderBottomColor = '';
+                }
+            });
+            
+            input.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderBottomColor = '';
+                }
+            });
+        });
+        
+        // Email validation
+        const emailInput = form.querySelector('input[type="email"]');
+        if (emailInput) {
+            emailInput.addEventListener('blur', function() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (this.value && !emailRegex.test(this.value)) {
+                    this.style.borderBottomColor = '#a00';
+                }
+            });
+        }
+    }
+    
+    // Animate stats numbers on scroll
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+    
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStatNumber(entry.target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe stat numbers and why section numbers
+    document.querySelectorAll('.stat-number, .why-item .icon').forEach(stat => {
+        statsObserver.observe(stat);
+    });
+    
+    // Animate stat numbers
+    function animateStatNumber(element) {
+        const finalValue = element.textContent;
+        const isPercentage = finalValue.includes('%');
+        const hasPlus = finalValue.includes('+');
+        const hasM = finalValue.includes('M');
+        const hasB = finalValue.includes('B');
+        const hasX = finalValue.includes('x');
+        
+        let numericValue = parseFloat(finalValue.replace(/[^0-9.]/g, ''));
+        if (hasX) numericValue = parseInt(finalValue); // For values like "58x"
+        
+        let currentValue = 0;
+        const increment = numericValue / 50;
+        const duration = 2000;
+        const stepTime = duration / 50;
+        
+        const counter = setInterval(() => {
+            currentValue += increment;
+            if (currentValue >= numericValue) {
+                currentValue = numericValue;
+                clearInterval(counter);
+            }
+            
+            let displayValue = Math.round(currentValue);
+            if (hasM) displayValue += 'M';
+            if (hasB) displayValue += 'B';
+            if (hasPlus) displayValue += '+';
+            if (isPercentage) displayValue += '%';
+            if (hasX) displayValue += 'x';
+            
+            element.textContent = displayValue;
+        }, stepTime);
+    }
+    
+    // Parallax effect for hero section
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxSpeed = 0.5;
+            heroSection.querySelector('.hero-background').style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+        });
+    }
+});
+    </script>
+</body>
+</html>

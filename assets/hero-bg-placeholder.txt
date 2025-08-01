@@ -1,0 +1,12 @@
+HERO BACKGROUND IMAGE PLACEHOLDER
+
+The hero section needs a luxury resort/ocean aerial view image similar to the media kit cover.
+
+Recommended specifications:
+- Resolution: 1920x1080 minimum (4K preferred)
+- Format: JPG or WebP
+- Style: Aerial view of turquoise ocean with luxury resort/villa
+- Color palette: Turquoise blues, sandy whites, tropical greens
+- Mood: Luxurious, aspirational, high-end travel
+
+Save the image as: hero-bg.jpg in this assets folder
