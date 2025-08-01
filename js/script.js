@@ -15,6 +15,90 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Form submission handling
+    const form = document.getElementById('contact-form');
+    const submitBtn = form?.querySelector('.submit-btn');
+    const btnText = form?.querySelector('.btn-text');
+    const btnLoading = form?.querySelector('.btn-loading');
+    const successMessage = form?.querySelector('.success-message');
+    const errorMessage = form?.querySelector('.error-message');
+    
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Hide any existing messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-block';
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                errorMessage.style.display = 'block';
+                console.error('Form submission error:', error);
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline-block';
+                btnLoading.style.display = 'none';
+            }
+        });
+        
+        // Client-side validation enhancement
+        const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.style.borderBottomColor = '#a00';
+                } else {
+                    this.style.borderBottomColor = '';
+                }
+            });
+            
+            input.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderBottomColor = '';
+                }
+            });
+        });
+        
+        // Email validation
+        const emailInput = form.querySelector('input[type="email"]');
+        if (emailInput) {
+            emailInput.addEventListener('blur', function() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (this.value && !emailRegex.test(this.value)) {
+                    this.style.borderBottomColor = '#a00';
+                }
+            });
+        }
+    }
+    
     // Animate stats numbers on scroll
     const observerOptions = {
         threshold: 0.5,

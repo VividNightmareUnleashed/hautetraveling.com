@@ -92,15 +92,72 @@
                 <p>Begin your luxury media journey</p>
             </div>
             
-            <div class="google-form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSddk5BlWAuROwuVTFQLpqkIghgDJmGujstibIGHsKPZ-jxI-A/viewform?embedded=true" 
-                        width="100%" 
-                        height="2169" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                        Loading…
-                </iframe>
+            <div class="form-container">
+                <form id="contact-form" action="https://formspree.io/f/xnnzzygp" method="POST" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="name">Contact Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required placeholder="Your company name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company-type">Company Type *</label>
+                        <select id="company-type" name="company-type" required>
+                            <option value="">Select your company type</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="resort">Resort</option>
+                            <option value="tour-operator">Tour Operator</option>
+                            <option value="dmc">DMC</option>
+                            <option value="villa-rental">Villa Rental</option>
+                            <option value="yacht-rental">Boat/Yacht Rental</option>
+                            <option value="travel-agency">Travel Agency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <input type="text" id="location" name="location" required placeholder="City, Country">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="instagram">Instagram Handle</label>
+                        <input type="text" id="instagram" name="instagram" placeholder="@yourhandle">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your property and goals..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Submit Partnership Request</span>
+                        <span class="btn-loading" style="display: none;">Sending...</span>
+                    </button>
+                    
+                    <div class="form-message success-message" style="display: none;">
+                        Thank you for your submission. We'll be in touch soon.
+                    </div>
+                    
+                    <div class="form-message error-message" style="display: none;">
+                        There was an error submitting your form. Please try again.
+                    </div>
+                </form>
             </div>
         </div>
     </div>
